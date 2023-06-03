@@ -49,11 +49,11 @@ export default {
   <div class="container" style="max-width: 900px;">
 
     <div class="tags">
-      <a href="https://www.einsatzprotokoll.com" target="_blank" rel="me external" class="tag">www.einsatzprotokoll.com</a>
-      <a href="https://www.einsatzprotokolgitl.com" target="_blank" rel="me external" class="tag">www.einsatzprotokoll.com</a>
+      <a href="https://github.com/turbopixel/Feuerwehr-Beitrag-Generator" title="Quellcode ansehen" target="_blank" rel="me external" class="tag">Quellcode (github.com)</a>
+      <a href="https://www.einsatzprotokoll.com" target="_blank" title="Feuerwehr Einsatzprotokoll" class="tag">www.einsatzprotokoll.com</a>
     </div>
 
-    <section class="section">
+    <section class="section pt-0">
 
       <h1 class="title is-2">Feuerwehr Beitrag Generator</h1>
       <h2 class="subtitle is-5">Für Social Media Posts</h2>
@@ -150,12 +150,12 @@ Das ist ein Beispiel Einsatzbericht.</pre>
           </div>
 
         </div>
-
-        <footer>
-          <hr>
-          <small>Copyright 2023 // Powered by <a href="https://hemk.es" title="Nico Hemkes">@turbopixel</a></small>
-        </footer>
       </div>
+
+      <footer>
+        <hr>
+        <small>Copyright 2023 // Powered by <a href="https://hemk.es" title="Nico Hemkes">@turbopixel</a></small>
+      </footer>
     </section>
   </div>
 </template>
