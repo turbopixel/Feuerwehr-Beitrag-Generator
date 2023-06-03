@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body{
+  background: #fefefe;
+  color: #1a1a1a;
+  font: 12px Verdana, Arial, sans-serif;
+}
+
+main{
+  margin: 0 auto;
+  max-width: 1380px;
+
+  header{
+    margin: 0 auto;
+    padding: 2rem;
+    height: 100px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section#generator{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    align-content: space-between
+  }
+
+}
