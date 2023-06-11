@@ -4,11 +4,9 @@ Erstelle ein Social Media Post für Facebook und Instagram für deine Feuerwehr 
 
 Website: [generator.einsatzprotokoll.com](https://generator.einsatzprotokoll.com/)
 
-## Recommended IDE Setup
+## vite Konfiguration
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+[Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Mitmachen
 
