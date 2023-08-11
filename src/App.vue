@@ -27,7 +27,7 @@ export default {
 
       <div v-if="this.$data.started === false">
         <LayoutStart/>
-        <button class="button is-success" @click="this.$data.started = true">Starten</button>
+        <button class="button is-success" @click="this.$data.started = true">Post erstellen</button>
       </div>
       <div v-else>
         <hr>

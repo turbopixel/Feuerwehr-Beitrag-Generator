@@ -13,6 +13,7 @@ export default {
       ort: '',
       einheiten: '',
       bericht: '',
+      link: '',
       copycontent: ''
     }
   },
@@ -30,17 +31,20 @@ export default {
     set_datum_uhrzeit(e) {
       console.log(e.target.innerText)
 
+      console.log(new moment().format("hh:mm"))
+
       this.$data.datum = new moment().format("YYYY-MM-DD");
-      this.$data.uhrzeit = new moment().format("hh:mm");
+      this.$data.uhrzeit = new moment().format("HH:mm");
     },
     create_example() {
       this.$data.nummer = "42";
       this.$data.datum = new moment().startOf('month').format("YYYY-MM-DD");
-      this.$data.uhrzeit = new moment().format("hh:mm");
+      this.$data.uhrzeit = new moment().format("HH:mm");
       this.$data.stichwort = "TH_Baum";
       this.$data.ort = "Veenhusen, Alter Kirchpfad";
       this.$data.einheiten = "FF Veenhusen, Polizei";
       this.$data.bericht = 'Das ist ein Beispiel Einsatzbericht.';
+      this.$data.link = 'https://www.einsatzprotokoll.com/einsatzbericht-editor';
     },
     clear_form() {
       this.$data.nummer = '';
@@ -50,6 +54,7 @@ export default {
       this.$data.ort = '';
       this.$data.einheiten = '';
       this.$data.bericht = '';
+      this.$data.link = '';
     }
   }
 }
@@ -91,10 +96,10 @@ export default {
           <label for="datum" class="label">Datum</label>
           <input type="date" v-model="datum" class="input" id="datum">
           <div class="help">
-          <div class="tags">
-            <span class="tag is-clickable" @click="set_datum_uhrzeit">Heute</span>
+            <div class="tags">
+              <span class="tag is-clickable" @click="set_datum_uhrzeit">Heute</span>
+            </div>
           </div>
-        </div>
         </div>
         <div class="control">
           <label for="uhrzeit" class="label">Uhrzeit</label>
@@ -120,6 +125,13 @@ export default {
         </div>
       </div>
 
+      <div class="field">
+        <label for="link" class="label">Link zum Beitrag</label>
+        <div class="control">
+          <input type="text" class="input" v-model="link" name="link"/>
+        </div>
+      </div>
+
       <div class="buttons">
         <a class="button is-outlined is-danger is-fullwidth" @click="clear_form">Formular leeren</a>
       </div>
@@ -140,6 +152,8 @@ export default {
         <strong v-if="einheiten">&#x1F692; {{ einheiten }}<br/></strong>
         <br/>
         <p v-if="bericht.length > 0">{{ bericht }}</p>
+        <br/>
+        <p v-if="link.length > 0">{{ link }}</p>
         <br/>
         <p>#Feuerwehr #Einsatzbericht #112 #Firefighter #Ehrenamt</p>
       </div>
