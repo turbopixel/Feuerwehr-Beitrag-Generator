@@ -44,17 +44,36 @@ export default {
 
       this.$data.dauer = e.target.innerText;
     },
+    set_ort(e) {
+      console.log(e.target.innerText)
+
+      this.$data.ort = e.target.innerText;
+    },
+    set_einheiten(e) {
+      console.log(e.target.innerText)
+
+      if (this.$data.einheiten.length == 0) {
+        this.$data.einheiten = e.target.innerText;
+      } else {
+        this.$data.einheiten = this.$data.einheiten + ", " + e.target.innerText
+      }
+    },
+    set_bericht(e) {
+      console.log(e.target.innerText)
+
+      this.$data.bericht = e.target.innerText;
+    },
     create_example() {
       this.$data.nummer = "42";
       this.$data.datum = new moment().startOf('month').format("YYYY-MM-DD");
       this.$data.jahr = new moment().format("YYYY");
       this.$data.uhrzeit = new moment().format("HH:mm");
       this.$data.dauer = "1 Stunde";
-      this.$data.stichwort = "TH_Baum";
-      this.$data.ort = "Veenhusen, Alter Kirchpfad";
-      this.$data.einheiten = "FF Veenhusen, Polizei";
+      this.$data.stichwort = "TMR-1 Türnotöffnung";
+      this.$data.ort = "Werdau, Bertolt-Brecht-Straße 18";
+      this.$data.einheiten = "FF Werdau, Rettungsdienst, Polizei";
       this.$data.bericht = 'Das ist ein Beispiel Einsatzbericht.';
-      this.$data.link = 'https://www.einsatzprotokoll.com/einsatzbericht-editor';
+      this.$data.link = 'https://www.feuerwehr-werdau.de/';
     },
     clear_form() {
       this.$data.nummer = '';
@@ -91,11 +110,11 @@ export default {
               <input type="text" class="input" v-model="stichwort" id="stichwort">
               <div class="help">
                 <div class="tags">
-                  <span class="tag is-clickable" @click="set_stichwort">BMA</span>
-                  <span class="tag is-clickable" @click="set_stichwort">TH_VU</span>
-                  <span class="tag is-clickable" @click="set_stichwort">TH_Baum</span>
-                  <span class="tag is-clickable" @click="set_stichwort">F_HAUS</span>
-                  <span class="tag is-clickable" @click="set_stichwort">F_PKW</span>
+                  <span class="tag is-clickable" @click="set_stichwort">TMR-1 Tür</span>
+                  <span class="tag is-clickable" @click="set_stichwort">TMR-2 Klemm VU</span>
+                  <span class="tag is-clickable" @click="set_stichwort">TH-0 Ölspur</span>
+                  <span class="tag is-clickable" @click="set_stichwort">Brand 1</span>
+                  <span class="tag is-clickable" @click="set_stichwort">ABC-1 Gasgeruch</span>
                 </div>
               </div>
             </div>
@@ -137,10 +156,31 @@ export default {
         <div class="control is-expanded">
           <label for="ort" class="label">Ort</label>
           <input type="text" class="input" v-model="ort" id="ort">
+          <div class="help">
+            <div class="tags">
+              <span class="tag is-clickable" @click="set_ort">Werdau</span>
+              <span class="tag is-clickable" @click="set_ort">Königswalde</span>
+              <span class="tag is-clickable" @click="set_ort">Langenhessen</span>
+              <span class="tag is-clickable" @click="set_ort">Leubnitz</span>
+              <span class="tag is-clickable" @click="set_ort">Steinpleis</span>
+              <span class="tag is-clickable" @click="set_ort">Zwickau</span>
+            </div>
+          </div>
         </div>
         <div class="control is-expanded">
           <label for="einheiten" class="label">Einheiten vor Ort</label>
           <input type="text" class="input" v-model="einheiten" id="einheiten">
+          <div class="help">
+            <div class="tags">
+              <span class="tag is-clickable" @click="set_einheiten">FF Werdau</span>
+              <span class="tag is-clickable" @click="set_einheiten">FF Königswalde</span>
+              <span class="tag is-clickable" @click="set_einheiten">FF Langenhessen</span>
+              <span class="tag is-clickable" @click="set_einheiten">@feuerwehr_leubnitz</span>
+              <span class="tag is-clickable" @click="set_einheiten">FF Steinpleis</span>
+              <span class="tag is-clickable" @click="set_einheiten">Rettungsdienst</span>
+              <span class="tag is-clickable" @click="set_einheiten">Polizei</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -148,6 +188,13 @@ export default {
         <label for="bericht" class="label">Einsatzbericht</label>
         <div class="control">
           <textarea class="textarea" rows="3" v-model="bericht" name="bericht"></textarea>
+          <div class="help">
+            <div class="tags">
+              <span class="tag is-clickable" @click="set_bericht">Patient über Tragetuch gerettet und an Rettungsdienst übergeben</span>
+              <span class="tag is-clickable" @click="set_bericht">Ausgelaufene Betriebsstoffe mit Bindemittel aufgenommen</span>
+              <span class="tag is-clickable" @click="set_bericht">PKW in Vollbrand abgelöscht, Straße gereinigt, Einsatzstelle an Polizei übergeben</span>
+            </div>
+          </div>
         </div>
       </div>
 
