@@ -113,7 +113,7 @@ export default {
                   <span class="tag is-clickable" @click="set_stichwort">TMR-1 Tür</span>
                   <span class="tag is-clickable" @click="set_stichwort">TMR-2 Klemm VU</span>
                   <span class="tag is-clickable" @click="set_stichwort">TH-0 Ölspur</span>
-                  <span class="tag is-clickable" @click="set_stichwort">Brand 1</span>
+                  <span class="tag is-clickable" @click="set_stichwort">BR-1</span>
                   <span class="tag is-clickable" @click="set_stichwort">ABC-1 Gasgeruch</span>
                 </div>
               </div>
@@ -229,7 +229,7 @@ export default {
         <br/>
         <div v-if="bericht.length > 0">{{ bericht }}<br/><br/></div>
         <div v-if="link.length > 0">{{ link }}<br/><br/></div>
-        <div>#feuerwehr #112 #einsatzbericht #einsatzinfo #firefighter #ehrenamt</div>
+        <div>#feuerwehr #112 #einsatzbericht #einsatzinfo #firefighter #ehrenamt #werdau #landkreiszwickau</div>
       </div>
     </div>
 
