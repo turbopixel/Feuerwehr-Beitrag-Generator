@@ -112,7 +112,7 @@ export default {
                 <div class="tags">
                   <span class="tag is-clickable" @click="set_stichwort">TMR-1 Tür</span>
                   <span class="tag is-clickable" @click="set_stichwort">TMR-2 Klemm VU</span>
-                  <span class="tag is-clickable" @click="set_stichwort">TH-0 Ölspur</span>
+                  <span class="tag is-clickable" @click="set_stichwort">THL-0 Ölspur</span>
                   <span class="tag is-clickable" @click="set_stichwort">BR-1</span>
                   <span class="tag is-clickable" @click="set_stichwort">ABC-1 Gasgeruch</span>
                 </div>
@@ -190,9 +190,8 @@ export default {
           <textarea class="textarea" rows="3" v-model="bericht" name="bericht"></textarea>
           <div class="help">
             <div class="tags">
-              <span class="tag is-clickable" @click="set_bericht">Patient über Tragetuch gerettet und an Rettungsdienst übergeben</span>
-              <span class="tag is-clickable" @click="set_bericht">Ausgelaufene Betriebsstoffe mit Bindemittel aufgenommen</span>
-              <span class="tag is-clickable" @click="set_bericht">PKW in Vollbrand abgelöscht, Straße gereinigt, Einsatzstelle an Polizei übergeben</span>
+              <span class="tag is-clickable" @click="set_bericht">Der Patient wurde über das Tragetuch gerettet und an den Rettungsdienst übergeben.</span>
+              <span class="tag is-clickable" @click="set_bericht">Ausgelaufene Betriebsstoffe wurden mit Bindemittel aufgenommen.</span>
             </div>
           </div>
         </div>
