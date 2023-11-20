@@ -110,11 +110,12 @@ export default {
               <input type="text" class="input" v-model="stichwort" id="stichwort">
               <div class="help">
                 <div class="tags">
-                  <span class="tag is-clickable" @click="set_stichwort">TMR-1 Tür</span>
-                  <span class="tag is-clickable" @click="set_stichwort">TMR-2 Klemm VU</span>
-                  <span class="tag is-clickable" @click="set_stichwort">THL-0 Ölspur</span>
-                  <span class="tag is-clickable" @click="set_stichwort">BR-1</span>
                   <span class="tag is-clickable" @click="set_stichwort">ABC-1 Gasgeruch</span>
+                  <span class="tag is-clickable" @click="set_stichwort">BMA-/GMA-Melder</span>
+                  <span class="tag is-clickable" @click="set_stichwort">BR-1</span>
+                  <span class="tag is-clickable" @click="set_stichwort">THL-0 Ölspur</span>
+                  <span class="tag is-clickable" @click="set_stichwort">TMR-1 Türnotöffnung</span>
+                  <span class="tag is-clickable" @click="set_stichwort">THL/TMR-2 VU Klemm</span>
                 </div>
               </div>
             </div>
@@ -175,8 +176,9 @@ export default {
               <span class="tag is-clickable" @click="set_einheiten">FF Werdau</span>
               <span class="tag is-clickable" @click="set_einheiten">FF Königswalde</span>
               <span class="tag is-clickable" @click="set_einheiten">FF Langenhessen</span>
-              <span class="tag is-clickable" @click="set_einheiten">@feuerwehr_leubnitz</span>
+              <span class="tag is-clickable" @click="set_einheiten">FF Leubnitz</span>
               <span class="tag is-clickable" @click="set_einheiten">FF Steinpleis</span>
+              <span class="tag is-clickable" @click="set_einheiten">FF Fraureuth</span>
               <span class="tag is-clickable" @click="set_einheiten">Rettungsdienst</span>
               <span class="tag is-clickable" @click="set_einheiten">Polizei</span>
             </div>
