@@ -126,7 +126,7 @@ export default {
       <div class="field is-grouped">
         <div class="control">
           <label for="datum" class="label">Datum</label>
-          <input type="date" v-model="datum" class="input" id="datum">
+          <input type="date" v-model="datum" class="input" id="datum" @click="set_datum_uhrzeit">
           <div class="help">
             <div class="tags">
               <span class="tag is-clickable" @click="set_datum_uhrzeit">Heute</span>
