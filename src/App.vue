@@ -6,7 +6,7 @@ export default {
   components: {LayoutForm, LayoutStart},
   data() {
     return {
-      started: false,
+      started: true, // set to false for introduction text
     }
   },
 }
@@ -18,8 +18,7 @@ export default {
 
     <section class="section pt-0">
       <div class="tags mt-2 mb-1">
-        <a href="https://www.einsatzprotokoll.com" target="_blank" title="Feuerwehr Einsatzprotokoll" class="tag is-link is-rounded">www.einsatzprotokoll.com</a>
-        <a href="https://github.com/turbopixel/Feuerwehr-Beitrag-Generator" title="Quellcode ansehen" target="_blank" rel="me external" class="tag is-info is-rounded">Quellcode (github.com)</a>
+        <a href="https://github.com/magenbrot/Feuerwehr-Beitrag-Generator" title="Quellcode ansehen" target="_blank" rel="me external" class="tag is-info is-rounded">Quellcode (github.com)</a>
       </div>
 
       <h1 class="title is-2">Feuerwehr Beitrag Generator</h1>
@@ -36,7 +35,7 @@ export default {
 
       <footer>
         <hr>
-        <small>Copyright 2023 // Powered by <a href="https://hemk.es" rel="noopener me external" target="_blank" title="Nico Hemkes">@turbopixel</a></small>
+        <small>Copyright 2023 // Hosted by <a href="https://ovtec.it/" rel="noopener me external" target="_blank" title="Oliver Völker">@magenbrot</a>. Original work by <a href="https://hemk.es/" rel="noopener me external" target="_blank" title="Nico Hemkes">@turbopixel</a></small>
       </footer>
     </section>
   </div>
