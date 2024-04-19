@@ -1,8 +1,8 @@
 # Feuerwehr-Beitrag-Generator
 
-Erstelle ein Social Media Post für Facebook und Instagram für deine Feuerwehr in Sekunden.
+Erstelle ein Social Media Post für Facebook und Instagram für deine Feuerwehr in Sekunden. Dieser Fork ist angepasst für die Freiwillige Feuerwehr Werdau.
 
-Website: [generator.einsatzprotokoll.com](https://generator.einsatzprotokoll.com/)
+Website: [generator.einsatzprotokoll.com](https://112.ovtec.it/)
 
 ## vite Konfiguration
 
