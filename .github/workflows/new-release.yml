@@ -1,9 +1,9 @@
 name: Create release
 
-on:
+on: 
   push:
     tags:
-      - release
+    - '*'
 
 permissions:
   contents: write
