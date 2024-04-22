@@ -1,9 +1,11 @@
 ---
-name: pull requests
-about: Pull requests let you tell others about changes you've pushed to a branch in a repository
-title: ""
-labels: ""
-assignees: ""
+name: Pull requests
+about: Pull requests let you tell others about changes you've pushed to a branch in
+  a repository
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 **Describe the PR**
