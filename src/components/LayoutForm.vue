@@ -142,7 +142,8 @@ export default {
           <input type="text" v-model="dauer" class="input" id="dauer">
           <div class="help">
             <div class="tags">
-              <span class="tag is-clickable" @click="set_dauer">0,5 Stunden</span>
+              <span class="tag is-clickable" @click="set_dauer">30 Minuten</span>
+              <span class="tag is-clickable" @click="set_dauer">45 Minuten</span>
               <span class="tag is-clickable" @click="set_dauer">1 Stunde</span>
               <span class="tag is-clickable" @click="set_dauer">1,5 Stunden</span>
               <span class="tag is-clickable" @click="set_dauer">2 Stunden</span>
