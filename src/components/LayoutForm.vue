@@ -47,7 +47,7 @@ export default {
     set_ort(e) {
       console.log(e.target.innerText)
 
-      this.$data.ort = e.target.innerText;
+      this.$data.ort = e.target.innerText + ", ";
     },
     set_einheiten(e) {
       console.log(e.target.innerText)
