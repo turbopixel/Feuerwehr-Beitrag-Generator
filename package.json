@@ -1,6 +1,6 @@
 {
   "name": "ffpostcreator",
-  "version": "2024.08.02",
+  "version": "2024.08.03",
   "private": true,
   "scripts": {
     "dev": "vite",
