@@ -1,3 +1,5 @@
+[![Publish Docker image](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/actions/workflows/docker-image.yml/badge.svg)](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/actions/workflows/docker-image.yml)
+
 # Feuerwehr-Beitrag-Generator
 
 Erstelle ein Social Media Post für Facebook und Instagram für deine Feuerwehr in Sekunden. Dieser Fork ist angepasst für die Freiwillige Feuerwehr Werdau.
