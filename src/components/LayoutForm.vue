@@ -15,6 +15,7 @@ export default {
       ort: '',
       einheiten: '',
       bericht: '',
+      tags: '#feuerwehr #einsatzbericht #einsatzinfo #firefighter #ehrenamt #werdau #landkreiszwickau #leitstelle #112',
       link: '',
       copycontent: ''
     }
@@ -63,6 +64,11 @@ export default {
 
       this.$data.bericht = e.target.innerText;
     },
+    set_tags(e) {
+      console.log(e.target.innerText)
+
+      this.$data.tags = this.$data.tags + " " + e.target.innerText
+    },
     create_example() {
       this.$data.nummer = "42";
       this.$data.datum = new moment().startOf('month').format("YYYY-MM-DD");
@@ -73,6 +79,7 @@ export default {
       this.$data.ort = "Werdau, Bertolt-Brecht-Straße 18";
       this.$data.einheiten = "FF Werdau, Rettungsdienst, Polizei";
       this.$data.bericht = 'Das ist ein Beispiel Einsatzbericht.';
+      this.$data.tags = '#feuerwehr #einsatzbericht #einsatzinfo #firefighter #ehrenamt #werdau #landkreiszwickau #leitstelle #112';
       this.$data.link = 'https://www.feuerwehr-werdau.de/';
     },
     clear_form() {
@@ -85,6 +92,7 @@ export default {
       this.$data.ort = '';
       this.$data.einheiten = '';
       this.$data.bericht = '';
+      this.$data.tags = '';
       this.$data.link = '';
     }
   }
@@ -201,6 +209,28 @@ export default {
       </div>
 
       <div class="field">
+        <label for="tags" class="label">Tags</label>
+        <div class="control">
+          <input type="text" class="input" v-model="tags" id="tags">
+          <div class="help">
+            <div class="tags">
+              <span class="tag is-clickable" @click="set_tags">#brand</span>
+              <span class="tag is-clickable" @click="set_tags">#THL</span>
+              <span class="tag is-clickable" @click="set_tags">#verkehr</span>
+              <span class="tag is-clickable" @click="set_tags">#verkersunfall</span>
+              <span class="tag is-clickable" @click="set_tags">#türnotöffnung</span>
+              <span class="tag is-clickable" @click="set_tags">#rettungsdienst</span>
+              <span class="tag is-clickable" @click="set_tags">#öl</span>
+              <span class="tag is-clickable" @click="set_tags">#betriebsmittel</span>
+              <span class="tag is-clickable" @click="set_tags">#baum</span>
+              <span class="tag is-clickable" @click="set_tags">#kettensäge</span>
+              <span class="tag is-clickable" @click="set_tags">#umwelt</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
         <label for="link" class="label">Link zum Beitrag</label>
         <div class="control">
           <input type="text" class="input" v-model="link" name="link"/>
@@ -223,15 +253,15 @@ export default {
         <div v-if="nummer !== '' && jahr !== ''"><strong>&#x1F6A8; +++ Einsatzbericht {{  nummer }} / {{  jahr }} +++</strong></div>
           <div v-else-if="nummer !=='' && jahr === ''"><strong>&#x1F6A8; +++ Einsatzbericht {{ nummer }} +++</strong></div>
           <div v-else><strong>&#x1F6A8; +++ Einsatzbericht +++ </strong></div>
-        <strong v-if="datum">&#x23F0; {{ format_date(datum) }} {{ uhrzeit }}<br/></strong>
-        <strong v-if="dauer">&#x231B; {{ dauer }}<br/></strong>
-        <strong v-if="stichwort">&#x1F4DF; {{ stichwort }}<br/></strong>
-        <strong v-if="ort">&#x1F30D; {{ ort }}<br/></strong>
-        <strong v-if="einheiten">&#x1F692; {{ einheiten }}<br/></strong>
-        <br/>
-        <div v-if="bericht.length > 0">{{ bericht }}<br/><br/></div>
-        <div v-if="link.length > 0">{{ link }}<br/><br/></div>
-        <div>#feuerwehr #112 #einsatzbericht #einsatzinfo #firefighter #ehrenamt #werdau #landkreiszwickau</div>
+          <strong v-if="stichwort">&#x1F4DF; {{ stichwort }}<br/></strong>
+          <strong v-if="datum">&#x23F0; {{ format_date(datum) }} {{ uhrzeit }}<br/></strong>
+          <strong v-if="dauer">&#x231B; {{ dauer }}<br/></strong>
+          <strong v-if="ort">&#x1F30D; {{ ort }}<br/></strong>
+          <strong v-if="einheiten">&#x1F692; {{ einheiten }}<br/></strong>
+          <br/>
+          <div v-if="bericht.length > 0">{{ bericht }}<br/><br/></div>
+          <div v-if="link.length > 0">{{ link }}<br/><br/></div>
+        <div>{{ tags }}</div>
       </div>
     </div>
 
