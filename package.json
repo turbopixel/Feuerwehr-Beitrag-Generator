@@ -1,7 +1,8 @@
 {
   "name": "ffpostcreator",
-  "version": "2024.08.04",
+  "version": "2024.09.00",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
