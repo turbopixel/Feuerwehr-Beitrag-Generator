@@ -35,7 +35,7 @@ export default {
 
       <footer>
         <hr>
-        <small>Copyright 2023 // Hosted by <a href="https://ovtec.it/" rel="noopener me external" target="_blank" title="Oliver Völker">@magenbrot</a>. Original work by <a href="https://hemk.es/" rel="noopener me external" target="_blank" title="Nico Hemkes">@turbopixel</a></small>
+        <small>Copyright 2024 // Hosted by <a href="https://ovtec.it/" rel="noopener me external" target="_blank" title="Oliver Völker">@magenbrot</a>. Original work by <a href="https://hemk.es/" rel="noopener me external" target="_blank" title="Nico Hemkes">@turbopixel</a></small>
       </footer>
     </section>
   </div>
