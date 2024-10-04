@@ -16,8 +16,7 @@ export default {
       einheiten: '',
       bericht: '',
       tags: '#feuerwehr #einsatzbericht #einsatzinfo #firefighter #ehrenamt #werdau #landkreiszwickau #leitstelle #112',
-      link: '',
-      copycontent: ''
+      link: ''
     }
   },
   methods: {
@@ -27,31 +26,30 @@ export default {
       }
     },
     set_stichwort(e) {
-      console.log(e.target.innerText)
+      // console.log(e.target.innerText)
 
       this.$data.stichwort = e.target.innerText;
     },
     set_datum_uhrzeit(e) {
-      console.log(e.target.innerText)
-
-      console.log(new moment().format("HH:mm"))
+      // console.log(e.target.innerText)
+      // console.log(new moment().format("HH:mm"))
 
       this.$data.datum = new moment().format("YYYY-MM-DD");
       this.$data.jahr = new moment().format("YYYY");
       this.$data.uhrzeit = new moment().format("HH:mm");
     },
     set_dauer(e) {
-      console.log(e.target.innerText)
+      // console.log(e.target.innerText)
 
       this.$data.dauer = e.target.innerText;
     },
     set_ort(e) {
-      console.log(e.target.innerText)
+      // console.log(e.target.innerText)
 
       this.$data.ort = e.target.innerText + ", ";
     },
     set_einheiten(e) {
-      console.log(e.target.innerText)
+      // console.log(e.target.innerText)
 
       if (this.$data.einheiten.length == 0) {
         this.$data.einheiten = e.target.innerText;
@@ -60,12 +58,12 @@ export default {
       }
     },
     set_bericht(e) {
-      console.log(e.target.innerText)
+      // console.log(e.target.innerText)
 
       this.$data.bericht = e.target.innerText;
     },
     set_tags(e) {
-      console.log(e.target.innerText)
+      // console.log(e.target.innerText)
 
       this.$data.tags = this.$data.tags + " " + e.target.innerText
     },

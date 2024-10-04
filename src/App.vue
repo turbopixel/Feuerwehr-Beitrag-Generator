@@ -2,11 +2,15 @@
 import LayoutStart from "./components/LayoutStart.vue";
 import LayoutForm from "./components/LayoutForm.vue";
 
+const version = import.meta.env.VITE_APP_VERSION
+console.log('Version:', version)
+
 export default {
   components: {LayoutForm, LayoutStart},
   data() {
     return {
       started: true, // set to false for introduction text
+      version: version
     }
   },
 }
@@ -15,10 +19,10 @@ export default {
 <template>
   <div class="container" style="max-width: 900px;">
 
-
     <section class="section pt-0">
       <div class="tags mt-2 mb-1">
         <a href="https://github.com/magenbrot/Feuerwehr-Beitrag-Generator" title="Quellcode ansehen" target="_blank" rel="me external" class="tag is-info is-rounded">Quellcode (github.com)</a>
+        Version {{version}}
       </div>
 
       <h1 class="title is-2">Feuerwehr Beitrag Generator</h1>
