@@ -1,6 +1,6 @@
 {
   "name": "ffpostcreator",
-  "version": "2024.10.04",
+  "version": "2024.10.05",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "bulma": "^1.0.2",
-    "vue": "^3.5.9"
+    "vue": "^3.5.11"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
