@@ -153,7 +153,6 @@ export default {
               <span class="tag is-clickable" @click="set_dauer">1 Stunde</span>
               <span class="tag is-clickable" @click="set_dauer">1,5 Stunden</span>
               <span class="tag is-clickable" @click="set_dauer">2 Stunden</span>
-              <span class="tag is-clickable" @click="set_dauer">2,5 Stunden</span>
               <span class="tag is-clickable" @click="set_dauer">3 Stunden</span>
              </div>
           </div>
