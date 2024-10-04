@@ -214,17 +214,26 @@ export default {
           <input type="text" class="input" v-model="tags" id="tags">
           <div class="help">
             <div class="tags">
-              <span class="tag is-clickable" @click="set_tags">#brand</span>
+              <span class="tag is-clickable" @click="set_tags">#Brand</span>
               <span class="tag is-clickable" @click="set_tags">#THL</span>
-              <span class="tag is-clickable" @click="set_tags">#verkehr</span>
-              <span class="tag is-clickable" @click="set_tags">#verkersunfall</span>
-              <span class="tag is-clickable" @click="set_tags">#türnotöffnung</span>
-              <span class="tag is-clickable" @click="set_tags">#rettungsdienst</span>
-              <span class="tag is-clickable" @click="set_tags">#öl</span>
-              <span class="tag is-clickable" @click="set_tags">#betriebsmittel</span>
-              <span class="tag is-clickable" @click="set_tags">#baum</span>
-              <span class="tag is-clickable" @click="set_tags">#kettensäge</span>
-              <span class="tag is-clickable" @click="set_tags">#umwelt</span>
+              <span class="tag is-clickable" @click="set_tags">#Verkehr #Verkersunfall</span>
+              <span class="tag is-clickable" @click="set_tags">#Türnotöffnung</span>
+              <span class="tag is-clickable" @click="set_tags">#Menschenrettung #Rettung</span>
+              <span class="tag is-clickable" @click="set_tags">#AGT #Atemschutz #Atemschutzgeräteträger #Angriffstrupp</span>
+              <span class="tag is-clickable" @click="set_tags">#HLF #Löschfahrzeug</span>
+              <span class="tag is-clickable" @click="set_tags">#LF</span>
+              <span class="tag is-clickable" @click="set_tags">#DLK</span>
+              <span class="tag is-clickable" @click="set_tags">#ELW</span>
+              <span class="tag is-clickable" @click="set_tags">#JUH</span>
+              <span class="tag is-clickable" @click="set_tags">#DRK</span>
+              <span class="tag is-clickable" @click="set_tags">#DLRG</span>
+              <span class="tag is-clickable" @click="set_tags">#Rettungsdienst #RTW #NEF</span>
+              <span class="tag is-clickable" @click="set_tags">#Katastrophe #Katastrophenschutz</span>
+              <span class="tag is-clickable" @click="set_tags">#MANV #MANE</span>
+              <span class="tag is-clickable" @click="set_tags">#Öl</span>
+              <span class="tag is-clickable" @click="set_tags">#Betriebsmittel</span>
+              <span class="tag is-clickable" @click="set_tags">#Baum #Kettensäge #Motorkettensäge</span>
+              <span class="tag is-clickable" @click="set_tags">#Umwelt #Umweltschutz</span>
             </div>
           </div>
         </div>
