@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <div class="container" style="max-width: 900px;">
+  <div class="container">
 
     <section class="section pt-0">
       <div class="tags mt-2 mb-1">

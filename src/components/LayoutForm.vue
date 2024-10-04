@@ -102,35 +102,26 @@ export default {
     <div class="column is-12">
       <h3 class="title is-4">Einsatzdaten eingeben <span class="tag is-primary is-clickable" @click="create_example">Beispiel generieren</span></h3>
 
-      <div class="field is-grouped">
-        <div class="columns">
-          <div class="column is-2">
-            <div class="control">
-              <label for="nummer" class="label">Nummer</label>
-              <input type="text" class="input" v-model="nummer" id="nummer">
-            </div>
-          </div>
-          <div class="column">
-            <div class="control is-expanded">
-              <label for="stichwort" class="label">Stichwort</label>
-              <input type="text" class="input" v-model="stichwort" id="stichwort">
-              <div class="help">
-                <div class="tags">
-                  <span class="tag is-clickable" @click="set_stichwort">ABC-1 Gasgeruch</span>
-                  <span class="tag is-clickable" @click="set_stichwort">BMA-/GMA-Melder</span>
-                  <span class="tag is-clickable" @click="set_stichwort">BR-1</span>
-                  <span class="tag is-clickable" @click="set_stichwort">THL-0 Ölspur</span>
-                  <span class="tag is-clickable" @click="set_stichwort">TMR-1 Türnotöffnung</span>
-                  <span class="tag is-clickable" @click="set_stichwort">THL/TMR-2 VU Klemm</span>
-                </div>
-              </div>
+      <div class="grid">
+        <div class="cell is-col-start-1">
+          <label for="nummer" class="label">Nummer</label>
+          <input type="text" class="input" v-model="nummer" id="nummer">
+        </div>
+        <div class="cell is-col-span-4">
+          <label for="stichwort" class="label">Stichwort</label>
+          <input type="text" class="input" v-model="stichwort" id="stichwort">
+          <div class="help">
+            <div class="tags">
+              <span class="tag is-clickable" @click="set_stichwort">ABC-1 Gasgeruch</span>
+              <span class="tag is-clickable" @click="set_stichwort">BMA-/GMA-Melder</span>
+              <span class="tag is-clickable" @click="set_stichwort">BR-1</span>
+              <span class="tag is-clickable" @click="set_stichwort">THL-0 Ölspur</span>
+              <span class="tag is-clickable" @click="set_stichwort">TMR-1 Türnotöffnung</span>
+              <span class="tag is-clickable" @click="set_stichwort">THL/TMR-2 VU Klemm</span>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="field is-grouped">
-        <div class="control">
+        <div class="cell is-col-start-1">
           <label for="datum" class="label">Datum</label>
           <input type="date" v-model="datum" class="input" id="datum" @click="set_datum_uhrzeit">
           <div class="help">
@@ -139,11 +130,11 @@ export default {
             </div>
           </div>
         </div>
-        <div class="control">
+        <div class="cell">
           <label for="uhrzeit" class="label">Uhrzeit</label>
           <input type="time" v-model="uhrzeit" class="input" id="uhrzeit">
         </div>
-        <div class="control">
+        <div class="cell is-col-span-3">
           <label for="dauer" class="label">Einsatzdauer</label>
           <input type="text" v-model="dauer" class="input" id="dauer">
           <div class="help">
@@ -157,10 +148,7 @@ export default {
              </div>
           </div>
         </div>
-      </div>
-
-      <div class="field is-grouped">
-        <div class="control is-expanded">
+        <div class="cell is-col-span-2 is-col-start-1">
           <label for="ort" class="label">Ort</label>
           <input type="text" class="input" v-model="ort" id="ort">
           <div class="help">
@@ -174,7 +162,7 @@ export default {
             </div>
           </div>
         </div>
-        <div class="control is-expanded">
+        <div class="cell is-col-span-3">
           <label for="einheiten" class="label">Einheiten vor Ort</label>
           <input type="text" class="input" v-model="einheiten" id="einheiten">
           <div class="help">
@@ -190,11 +178,8 @@ export default {
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="field">
-        <label for="bericht" class="label">Einsatzbericht</label>
-        <div class="control">
+        <div class="cell is-col-start-1 is-col-span-5">
+          <label for="bericht" class="label">Einsatzbericht</label>
           <textarea class="textarea" rows="3" v-model="bericht" name="bericht"></textarea>
           <div class="help">
             <div class="tags">
@@ -203,11 +188,9 @@ export default {
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label for="tags" class="label">Tags</label>
-        <div class="control">
+        <div class="cell is-col-start-1 is-col-span-5">
+          <label for="tags" class="label">Tags</label>
           <input type="text" class="input" v-model="tags" id="tags">
           <div class="help">
             <div class="tags">
@@ -234,19 +217,14 @@ export default {
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="field">
-        <label for="link" class="label">Link zum Beitrag</label>
-        <div class="control">
+        <div class="cell is-col-start-1 is-col-span-5">
+          <label for="link" class="label">Link zum Beitrag</label>
           <input type="text" class="input" v-model="link" name="link"/>
         </div>
       </div>
-
       <div class="buttons">
         <a class="button is-outlined is-danger is-fullwidth" @click="clear_form">Formular leeren</a>
       </div>
-
     </div>
 
     <div class="column is-12">
