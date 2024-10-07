@@ -4,23 +4,22 @@
        Klicke unten auf <em>Post erstellen</em> und fülle das Formular mit den Einsatzdaten aus.
     </p>
     <h5 class="title is-5 mb-2">Beispiel:</h5>
-    <pre>🚨 +++ Einsatzbericht 42 / 2023 +++
-⏰ 01.08.2023 12:08
+    <pre>🚨 +++ Einsatzbericht 42 / 2024 +++
+📟 TMR-1 Türnotöffnung
+⏰ 01.10.2024 15:01
 ⌛ 1 Stunde
-📟 TH_Baum
-🌍 Veenhusen, Alter Kirchpfad
-🚒 FF Veenhusen, Polizei
+🌍 Werdau, Bertolt-Brecht-Straße 18
+🚒 FF Werdau, Rettungsdienst, Polizei
 
 Das ist ein Beispiel Einsatzbericht.
 
-https://www.einsatzprotokoll.com/einsatzbericht-editor
+https://www.feuerwehr-werdau.de/
 
-#feuerwehr #112 #einsatzbericht #einsatzinfo #firefighter #ehrenamt</pre>
+#feuerwehr #einsatzbericht #einsatzinfo #firefighter #ehrenamt #werdau #landkreiszwickau #leitstelle #112</pre>
   </div>
 </template>
 
 <script>
 export default {
-
 }
 </script>
