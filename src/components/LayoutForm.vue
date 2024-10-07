@@ -1,5 +1,5 @@
 <script>
-import moment from 'moment'
+import moment from 'moment';
 
 export default {
   components: {},
@@ -94,7 +94,7 @@ export default {
       this.$data.link = '';
     }
   }
-}
+};
 </script>
 
 <template>

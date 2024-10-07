@@ -1,19 +1,23 @@
 <script>
 import LayoutStart from "./components/LayoutStart.vue";
 import LayoutForm from "./components/LayoutForm.vue";
+import moment from 'moment';
 
-const version = import.meta.env.VITE_APP_VERSION
-console.log('Version:', version)
+
+const version = import.meta.env.VITE_APP_VERSION;
+console.log('Version:', version);
+const copyright_year = moment().year();
 
 export default {
   components: {LayoutForm, LayoutStart},
   data() {
     return {
       started: true, // set to false for introduction text
-      version: version
+      version: version,
+      copyright_year: copyright_year
     }
-  },
-}
+  }
+};
 </script>
 
 <template>
@@ -39,7 +43,7 @@ export default {
 
       <footer>
         <hr>
-        <small>Copyright 2024 // Hosted by <a href="https://ovtec.it/" rel="noopener me external" target="_blank" title="Oliver Völker">@magenbrot</a>. Original work by <a href="https://hemk.es/" rel="noopener me external" target="_blank" title="Nico Hemkes">@turbopixel</a></small>
+        <small>Copyright {{copyright_year}} // Hosted by <a href="https://ovtec.it/" rel="noopener me external" target="_blank" title="Oliver Völker">@magenbrot</a>. Original work by <a href="https://hemk.es/" rel="noopener me external" target="_blank" title="Nico Hemkes">@turbopixel</a></small>
       </footer>
     </section>
   </div>
