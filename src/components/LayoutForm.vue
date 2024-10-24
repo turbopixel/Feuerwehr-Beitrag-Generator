@@ -13,7 +13,7 @@ export default {
       dauer: '',
       stichwort: '',
       ort: '',
-      einheiten: '',
+      einheiten: 'FF Werdau',
       bericht: '',
       tags: '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112',
       link: ''
@@ -70,7 +70,7 @@ export default {
     reset_einheiten(e) {
       // console.log(e.target.innerText)
 
-      this.$data.einheiten = "";
+      this.$data.einheiten = "FF Werdau";
     },
     reset_einsatzbericht(e) {
       // console.log(e.target.innerText)
@@ -103,7 +103,7 @@ export default {
       this.$data.dauer = '';
       this.$data.stichwort = '';
       this.$data.ort = '';
-      this.$data.einheiten = '';
+      this.$data.einheiten = 'FF Werdau';
       this.$data.bericht = '';
       this.$data.tags = '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112';
       this.$data.link = '';
@@ -182,7 +182,6 @@ export default {
           <input type="text" class="input" v-model="einheiten" id="einheiten">
           <div class="help">
             <div class="tags">
-              <span class="tag is-clickable" @click="set_einheiten">FF Werdau</span>
               <span class="tag is-clickable" @click="set_einheiten">FF Königswalde</span>
               <span class="tag is-clickable" @click="set_einheiten">FF Langenhessen</span>
               <span class="tag is-clickable" @click="set_einheiten">FF Leubnitz</span>
