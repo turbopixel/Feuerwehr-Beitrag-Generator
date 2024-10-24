@@ -15,7 +15,7 @@ export default {
       ort: '',
       einheiten: '',
       bericht: '',
-      tags: '#feuerwehr #einsatzbericht #einsatzinfo #firefighter #ehrenamt #werdau #landkreiszwickau #leitstelle #112',
+      tags: '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112',
       link: ''
     }
   },
@@ -80,7 +80,7 @@ export default {
     reset_tags(e) {
       // console.log(e.target.innerText)
 
-      this.$data.tags = "#feuerwehr #einsatzbericht #einsatzinfo #firefighter #ehrenamt #werdau #landkreiszwickau #leitstelle #112";
+      this.$data.tags = "#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112";
     },
     create_example() {
       this.$data.nummer = "42";
@@ -92,7 +92,7 @@ export default {
       this.$data.ort = "Werdau, Bertolt-Brecht-Straße 18";
       this.$data.einheiten = "FF Werdau, Rettungsdienst, Polizei";
       this.$data.bericht = 'Das ist ein Beispiel Einsatzbericht.';
-      this.$data.tags = '#feuerwehr #einsatzbericht #einsatzinfo #firefighter #ehrenamt #werdau #landkreiszwickau #leitstelle #112';
+      this.$data.tags = '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112';
       this.$data.link = 'https://www.feuerwehr-werdau.de/';
     },
     clear_form() {
