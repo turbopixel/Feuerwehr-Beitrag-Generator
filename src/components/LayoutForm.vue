@@ -67,6 +67,21 @@ export default {
 
       this.$data.tags = this.$data.tags + " " + e.target.innerText
     },
+    reset_einheiten(e) {
+      // console.log(e.target.innerText)
+
+      this.$data.einheiten = "";
+    },
+    reset_einsatzbericht(e) {
+      // console.log(e.target.innerText)
+
+      this.$data.bericht = "";
+    },
+    reset_tags(e) {
+      // console.log(e.target.innerText)
+
+      this.$data.tags = "#feuerwehr #einsatzbericht #einsatzinfo #firefighter #ehrenamt #werdau #landkreiszwickau #leitstelle #112";
+    },
     create_example() {
       this.$data.nummer = "42";
       this.$data.datum = new moment().startOf('month').format("YYYY-MM-DD");
@@ -104,7 +119,7 @@ export default {
 
       <div class="grid">
         <div class="cell is-col-start-1">
-          <label for="nummer" class="label">Nummer</label>
+          <label for="nummer" class="label">Nummer <span class="tag is-primary is-clickable" @click="nummer++">+1</span></label>
           <input type="text" class="input" v-model="nummer" id="nummer">
         </div>
         <div class="cell is-col-span-4">
@@ -163,7 +178,7 @@ export default {
           </div>
         </div>
         <div class="cell is-col-span-3">
-          <label for="einheiten" class="label">Einheiten vor Ort</label>
+          <label for="einheiten" class="label">Einheiten vor Ort <span class="tag is-primary is-clickable" @click="reset_einheiten">Reset</span></label>
           <input type="text" class="input" v-model="einheiten" id="einheiten">
           <div class="help">
             <div class="tags">
@@ -179,7 +194,7 @@ export default {
           </div>
         </div>
         <div class="cell is-col-start-1 is-col-span-5">
-          <label for="bericht" class="label">Einsatzbericht</label>
+          <label for="bericht" class="label">Einsatzbericht <span class="tag is-primary is-clickable" @click="reset_einsatzbericht">Reset</span></label>
           <textarea class="textarea" rows="3" v-model="bericht" name="bericht"></textarea>
           <div class="help">
             <div class="tags">
@@ -190,7 +205,7 @@ export default {
         </div>
 
         <div class="cell is-col-start-1 is-col-span-5">
-          <label for="tags" class="label">Tags</label>
+          <label for="tags" class="label">Tags <span class="tag is-primary is-clickable" @click="reset_tags">Reset</span></label>
           <input type="text" class="input" v-model="tags" id="tags">
           <div class="help">
             <div class="tags">
