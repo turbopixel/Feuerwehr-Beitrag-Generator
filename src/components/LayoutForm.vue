@@ -105,7 +105,7 @@ export default {
       this.$data.ort = '';
       this.$data.einheiten = '';
       this.$data.bericht = '';
-      this.$data.tags = '';
+      this.$data.tags = '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112';
       this.$data.link = '';
     }
   }
