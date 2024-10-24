@@ -213,20 +213,17 @@ export default {
               <span class="tag is-clickable" @click="set_tags">#THL</span>
               <span class="tag is-clickable" @click="set_tags">#Verkehr #Verkersunfall</span>
               <span class="tag is-clickable" @click="set_tags">#Türnotöffnung</span>
-              <span class="tag is-clickable" @click="set_tags">#Menschenrettung #Rettung</span>
+              <span class="tag is-clickable" @click="set_tags">#TMR #Menschenrettung #Rettung</span>
               <span class="tag is-clickable" @click="set_tags">#AGT #Atemschutz #Atemschutzgeräteträger #Angriffstrupp</span>
               <span class="tag is-clickable" @click="set_tags">#HLF #Löschfahrzeug</span>
               <span class="tag is-clickable" @click="set_tags">#LF</span>
               <span class="tag is-clickable" @click="set_tags">#DLK</span>
               <span class="tag is-clickable" @click="set_tags">#ELW</span>
-              <span class="tag is-clickable" @click="set_tags">#JUH</span>
-              <span class="tag is-clickable" @click="set_tags">#DRK</span>
-              <span class="tag is-clickable" @click="set_tags">#DLRG</span>
               <span class="tag is-clickable" @click="set_tags">#Rettungsdienst #RTW #NEF</span>
+              <span class="tag is-clickable" @click="set_tags">#Polizei #PolizeiSachsen</span>
               <span class="tag is-clickable" @click="set_tags">#Katastrophe #Katastrophenschutz</span>
               <span class="tag is-clickable" @click="set_tags">#MANV #MANE</span>
-              <span class="tag is-clickable" @click="set_tags">#Öl</span>
-              <span class="tag is-clickable" @click="set_tags">#Betriebsmittel</span>
+              <span class="tag is-clickable" @click="set_tags">#Betriebsmittel #Öl #Benzin #Diesel</span>
               <span class="tag is-clickable" @click="set_tags">#Baum #Kettensäge #Motorkettensäge</span>
               <span class="tag is-clickable" @click="set_tags">#Umwelt #Umweltschutz</span>
             </div>
