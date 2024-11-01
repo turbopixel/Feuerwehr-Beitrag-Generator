@@ -210,7 +210,7 @@ export default {
             <div class="tags">
               <span class="tag is-clickable" @click="set_tags">#Brand</span>
               <span class="tag is-clickable" @click="set_tags">#THL</span>
-              <span class="tag is-clickable" @click="set_tags">#Verkehr #Verkersunfall</span>
+              <span class="tag is-clickable" @click="set_tags">#Verkehr #Verkehrsunfall</span>
               <span class="tag is-clickable" @click="set_tags">#Türnotöffnung</span>
               <span class="tag is-clickable" @click="set_tags">#TMR #Menschenrettung #Rettung</span>
               <span class="tag is-clickable" @click="set_tags">#AGT #Atemschutz #Atemschutzgeräteträger #Angriffstrupp</span>
