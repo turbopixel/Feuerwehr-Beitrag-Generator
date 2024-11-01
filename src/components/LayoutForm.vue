@@ -208,17 +208,17 @@ export default {
           <input type="text" class="input" v-model="tags" id="tags">
           <div class="help">
             <div class="tags">
-              <span class="tag is-clickable" @click="set_tags">#Brand</span>
-              <span class="tag is-clickable" @click="set_tags">#THL</span>
+              <span class="tag is-clickable" @click="set_tags">#Brand #Feuer #Brandeinsatz</span>
+              <span class="tag is-clickable" @click="set_tags">#THL #TechnischeHilfeleistung</span>
               <span class="tag is-clickable" @click="set_tags">#Verkehr #Verkehrsunfall</span>
               <span class="tag is-clickable" @click="set_tags">#Türnotöffnung</span>
               <span class="tag is-clickable" @click="set_tags">#TMR #Menschenrettung #Rettung</span>
               <span class="tag is-clickable" @click="set_tags">#AGT #Atemschutz #Atemschutzgeräteträger #Angriffstrupp</span>
-              <span class="tag is-clickable" @click="set_tags">#HLF #Löschfahrzeug</span>
-              <span class="tag is-clickable" @click="set_tags">#LF</span>
-              <span class="tag is-clickable" @click="set_tags">#DLK</span>
-              <span class="tag is-clickable" @click="set_tags">#ELW</span>
-              <span class="tag is-clickable" @click="set_tags">#Rettungsdienst #RTW #NEF</span>
+              <span class="tag is-clickable" @click="set_tags">#HLF #Hilfeleistungslöschgruppenfahrzeug</span>
+              <span class="tag is-clickable" @click="set_tags">#LF #Löschgruppenfahrzeug</span>
+              <span class="tag is-clickable" @click="set_tags">#DLK #DLAK #Drehleiter</span>
+              <span class="tag is-clickable" @click="set_tags">#ELW #Einsatzleitwagen</span>
+              <span class="tag is-clickable" @click="set_tags">#RTW #NEF #Rettungsdienst #Rettungswagen #Notarzt #Notarzteinsatzwagen</span>
               <span class="tag is-clickable" @click="set_tags">#Polizei #PolizeiSachsen</span>
               <span class="tag is-clickable" @click="set_tags">#Katastrophe #Katastrophenschutz</span>
               <span class="tag is-clickable" @click="set_tags">#MANV #MANE</span>
