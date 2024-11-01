@@ -1,6 +1,8 @@
 <script>
 import moment from 'moment';
 
+const default_tags = '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112';
+const default_einheiten = 'FF Werdau';
 export default {
   components: {},
   data() {
@@ -13,9 +15,9 @@ export default {
       dauer: '',
       stichwort: '',
       ort: '',
-      einheiten: 'FF Werdau',
+      einheiten: default_einheiten,
       bericht: '',
-      tags: '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112',
+      tags: default_tags,
       link: ''
     }
   },
@@ -70,7 +72,7 @@ export default {
     reset_einheiten(e) {
       // console.log(e.target.innerText)
 
-      this.$data.einheiten = "FF Werdau";
+      this.$data.einheiten = default_einheiten;
     },
     reset_einsatzbericht(e) {
       // console.log(e.target.innerText)
@@ -80,7 +82,7 @@ export default {
     reset_tags(e) {
       // console.log(e.target.innerText)
 
-      this.$data.tags = "#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112";
+      this.$data.tags = default_tags;
     },
     create_example() {
       this.$data.nummer = "42";
@@ -90,9 +92,9 @@ export default {
       this.$data.dauer = "1 Stunde";
       this.$data.stichwort = "TMR-1 Türnotöffnung";
       this.$data.ort = "Werdau, Bertolt-Brecht-Straße 18";
-      this.$data.einheiten = "FF Werdau, Rettungsdienst, Polizei";
+      this.$data.einheiten = default_einheiten + ", Rettungsdienst, Polizei";
       this.$data.bericht = 'Das ist ein Beispiel Einsatzbericht.';
-      this.$data.tags = '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112';
+      this.$data.tags = default_tags;
       this.$data.link = 'https://www.feuerwehr-werdau.de/';
     },
     clear_form() {
@@ -103,9 +105,9 @@ export default {
       this.$data.dauer = '';
       this.$data.stichwort = '';
       this.$data.ort = '';
-      this.$data.einheiten = 'FF Werdau';
+      this.$data.einheiten = default_einheiten;
       this.$data.bericht = '';
-      this.$data.tags = '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112';
+      this.$data.tags = default_tags;
       this.$data.link = '';
     }
   }
