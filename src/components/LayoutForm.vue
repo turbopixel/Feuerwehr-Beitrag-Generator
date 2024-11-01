@@ -3,6 +3,7 @@ import moment from 'moment';
 
 const default_tags = '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112';
 const default_einheiten = 'FF Werdau';
+
 export default {
   components: {},
   data() {
