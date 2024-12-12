@@ -1,7 +1,7 @@
 <script>
 import moment from 'moment';
 
-const default_tags = '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112';
+const default_tags = '#Feuerwehr #Einsatzbericht #Einsatzinfo #Firefighter #Ehrenamt #Werdau #LandkreisZwickau #Leitstelle #112 #wirfüreuch';
 const default_einheiten = 'FF Werdau';
 
 export default {
@@ -133,9 +133,9 @@ export default {
               <span class="tag is-clickable" @click="set_stichwort">ABC-1 Gasgeruch</span>
               <span class="tag is-clickable" @click="set_stichwort">BMA-/GMA-Melder</span>
               <span class="tag is-clickable" @click="set_stichwort">BR-1</span>
-              <span class="tag is-clickable" @click="set_stichwort">THL-0 Ölspur</span>
+              <span class="tag is-clickable" @click="set_stichwort">TH-0 Ölspur</span>
               <span class="tag is-clickable" @click="set_stichwort">TMR-1 Türnotöffnung</span>
-              <span class="tag is-clickable" @click="set_stichwort">THL/TMR-2 VU Klemm</span>
+              <span class="tag is-clickable" @click="set_stichwort">TH/TMR-2 VU Klemm</span>
             </div>
           </div>
         </div>
@@ -190,6 +190,7 @@ export default {
               <span class="tag is-clickable" @click="set_einheiten">FF Leubnitz</span>
               <span class="tag is-clickable" @click="set_einheiten">FF Steinpleis</span>
               <span class="tag is-clickable" @click="set_einheiten">FF Fraureuth</span>
+              <span class="tag is-clickable" @click="set_einheiten">BF Zwickau</span>
               <span class="tag is-clickable" @click="set_einheiten">Rettungsdienst</span>
               <span class="tag is-clickable" @click="set_einheiten">Polizei</span>
             </div>
@@ -211,17 +212,20 @@ export default {
           <input type="text" class="input" v-model="tags" id="tags">
           <div class="help">
             <div class="tags">
-              <span class="tag is-clickable" @click="set_tags">#Brand #Feuer #Brandeinsatz</span>
-              <span class="tag is-clickable" @click="set_tags">#THL #TechnischeHilfeleistung</span>
+              <span class="tag is-clickable" @click="set_tags">#Brand #Feuer #Brandeinsatz #Wärmebildkamera</span>
+              <span class="tag is-clickable" @click="set_tags">#BMA #GMA #Brandmeldeanlage</span>
+              <span class="tag is-clickable" @click="set_tags">#TH #THL #TechnischeHilfeleistung</span>
               <span class="tag is-clickable" @click="set_tags">#Verkehr #Verkehrsunfall</span>
               <span class="tag is-clickable" @click="set_tags">#Türnotöffnung</span>
               <span class="tag is-clickable" @click="set_tags">#TMR #Menschenrettung #Rettung</span>
+              <span class="tag is-clickable" @click="set_tags">#Fehlalarm</span>
               <span class="tag is-clickable" @click="set_tags">#AGT #Atemschutz #Atemschutzgeräteträger #Angriffstrupp</span>
               <span class="tag is-clickable" @click="set_tags">#HLF #Hilfeleistungslöschgruppenfahrzeug</span>
               <span class="tag is-clickable" @click="set_tags">#LF #Löschgruppenfahrzeug</span>
               <span class="tag is-clickable" @click="set_tags">#DLK #DLAK #Drehleiter</span>
               <span class="tag is-clickable" @click="set_tags">#ELW #Einsatzleitwagen</span>
-              <span class="tag is-clickable" @click="set_tags">#RTW #NEF #Rettungsdienst #Rettungswagen #Notarzt #Notarzteinsatzwagen</span>
+              <span class="tag is-clickable" @click="set_tags">#Rettungsdienst #RTW #Rettungswagen</span>
+              <span class="tag is-clickable" @click="set_tags">#Notarzt #NEF #Notarzteinsatzwagen</span>
               <span class="tag is-clickable" @click="set_tags">#Polizei #PolizeiSachsen</span>
               <span class="tag is-clickable" @click="set_tags">#Katastrophe #Katastrophenschutz</span>
               <span class="tag is-clickable" @click="set_tags">#MANV #MANE</span>
