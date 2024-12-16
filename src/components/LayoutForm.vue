@@ -135,7 +135,7 @@ export default {
               <span class="tag is-clickable" @click="set_stichwort">BR-1</span>
               <span class="tag is-clickable" @click="set_stichwort">TH-0 Ölspur</span>
               <span class="tag is-clickable" @click="set_stichwort">TMR-1 Türnotöffnung</span>
-              <span class="tag is-clickable" @click="set_stichwort">TH/TMR-2 VU Klemm</span>
+              <span class="tag is-clickable" @click="set_stichwort">TMR-2/TH-2 VU Klemm</span>
             </div>
           </div>
         </div>
@@ -214,10 +214,10 @@ export default {
             <div class="tags">
               <span class="tag is-clickable" @click="set_tags">#Brand #Feuer #Brandeinsatz #Wärmebildkamera</span>
               <span class="tag is-clickable" @click="set_tags">#BMA #GMA #Brandmeldeanlage</span>
+              <span class="tag is-clickable" @click="set_tags">#TMR #Menschenrettung #Rettung</span>
               <span class="tag is-clickable" @click="set_tags">#TH #THL #TechnischeHilfeleistung</span>
               <span class="tag is-clickable" @click="set_tags">#Verkehr #Verkehrsunfall</span>
               <span class="tag is-clickable" @click="set_tags">#Türnotöffnung</span>
-              <span class="tag is-clickable" @click="set_tags">#TMR #Menschenrettung #Rettung</span>
               <span class="tag is-clickable" @click="set_tags">#Fehlalarm</span>
               <span class="tag is-clickable" @click="set_tags">#AGT #Atemschutz #Atemschutzgeräteträger #Angriffstrupp</span>
               <span class="tag is-clickable" @click="set_tags">#HLF #Hilfeleistungslöschgruppenfahrzeug</span>
