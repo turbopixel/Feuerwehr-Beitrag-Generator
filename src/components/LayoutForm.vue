@@ -18,35 +18,35 @@ export default {
     }
   },
   methods: {
-    format_date(value) {
+    dateFormat(value) {
       if (value) {
         return moment(String(value)).format('DD.MM.YYYY')
       }
     },
-    set_stichwort(e) {
+    addKeyword(e) {
       console.log(e.target.innerText)
 
       this.$data.stichwort = e.target.innerText;
     },
-    set_datum_uhrzeit(e) {
-      console.log(e.target.innerText)
-
-      console.log(new moment().format("hh:mm"))
-
+    setDateToday(e) {
       this.$data.datum = new moment().format("YYYY-MM-DD");
       this.$data.uhrzeit = new moment().format("HH:mm");
     },
-    create_example() {
-      this.$data.nummer = "42";
+    setDateYesterday(e) {
+      this.$data.datum = new moment().subtract(1, 'days').format("YYYY-MM-DD");
+      this.$data.uhrzeit = new moment().subtract(1, 'days').format("HH:mm");
+    },
+    createExample() {
+      this.$data.nummer = "112";
       this.$data.datum = new moment().startOf('month').format("YYYY-MM-DD");
       this.$data.uhrzeit = new moment().format("HH:mm");
       this.$data.stichwort = "TH_Baum";
       this.$data.ort = "Veenhusen, Alter Kirchpfad";
-      this.$data.einheiten = "FF Veenhusen, Polizei";
+      this.$data.einheiten = "FF Ortswehr, Rettungsdienst";
       this.$data.bericht = 'Das ist ein Beispiel Einsatzbericht.';
-      this.$data.link = 'https://www.einsatzprotokoll.com/einsatzbericht-editor';
+      this.$data.link = 'https://www.einsatzprotokoll.com/';
     },
-    clear_form() {
+    formReset() {
       this.$data.nummer = '';
       this.$data.datum = '';
       this.$data.uhrzeit = '';
@@ -63,7 +63,7 @@ export default {
 <template>
   <div class="columns is-multiline">
     <div class="column is-12">
-      <h3 class="title is-4">Einsatzdaten eingeben <span class="tag is-primary is-clickable" @click="create_example">Beispiel generieren</span></h3>
+      <h3 class="title is-4">Einsatzdaten eingeben <span class="tag is-primary is-clickable" @click="createExample">Beispiel generieren</span></h3>
 
       <div class="field is-grouped">
         <div class="columns">
@@ -79,11 +79,11 @@ export default {
               <input type="text" class="input" v-model="stichwort" id="stichwort">
               <div class="help">
                 <div class="tags">
-                  <span class="tag is-clickable" @click="set_stichwort">BMA</span>
-                  <span class="tag is-clickable" @click="set_stichwort">TH_VU</span>
-                  <span class="tag is-clickable" @click="set_stichwort">TH_Baum</span>
-                  <span class="tag is-clickable" @click="set_stichwort">F_HAUS</span>
-                  <span class="tag is-clickable" @click="set_stichwort">F_PKW</span>
+                  <span class="tag is-clickable" @click="addKeyword">BMA</span>
+                  <span class="tag is-clickable" @click="addKeyword">TH_VU</span>
+                  <span class="tag is-clickable" @click="addKeyword">TH_Baum</span>
+                  <span class="tag is-clickable" @click="addKeyword">F_HAUS</span>
+                  <span class="tag is-clickable" @click="addKeyword">F_PKW</span>
                 </div>
               </div>
             </div>
@@ -97,7 +97,8 @@ export default {
           <input type="date" v-model="datum" class="input" id="datum">
           <div class="help">
             <div class="tags">
-              <span class="tag is-clickable" @click="set_datum_uhrzeit">Heute</span>
+              <span class="tag is-clickable" @click="setDateToday">Heute</span>
+              <span class="tag is-clickable" @click="setDateYesterday">Gestern</span>
             </div>
           </div>
         </div>
@@ -133,29 +134,29 @@ export default {
       </div>
 
       <div class="buttons">
-        <a class="button is-outlined is-danger is-fullwidth" @click="clear_form">Formular leeren</a>
+        <a class="button is-outlined is-danger is-fullwidth" @click="formReset">Formular leeren</a>
       </div>
 
     </div>
 
-    <div class="column is-12">
+    <div class="column is-12" v-if="stichwort || ort || datum">
       <hr>
       <h3 class="title is-4">Ergebnis:</h3>
       <div class="content">
         <p>Kopiere deinen Social Media Post für Facebook und Instagram:</p>
       </div>
       <div class="textarea is-fullwidth" contenteditable="true" rows="6" id="vorschau">
-        <strong>Einsatzbericht</strong> <strong v-if="nummer">#{{ nummer }}<br/></strong>
-        <strong v-if="datum">&#x23F0; {{ format_date(datum) }} {{ uhrzeit }}<br/></strong>
+        <strong>Einsatzbericht</strong> <strong v-if="nummer">#{{ nummer }}</strong><br/>
+        <strong v-if="datum">&#x23F0; {{ dateFormat(datum) }} {{ uhrzeit }}<br/></strong>
         <strong v-if="stichwort">&#x1F4DF; {{ stichwort }}<br/></strong>
         <strong v-if="ort">&#x1F30D; {{ ort }}<br/></strong>
         <strong v-if="einheiten">&#x1F692; {{ einheiten }}<br/></strong>
         <br/>
         <p v-if="bericht.length > 0">{{ bericht }}</p>
         <br/>
-        <p v-if="link.length > 0">{{ link }}</p>
+        <p v-if="link.length > 0">Zum Bericht: {{ link }}</p>
         <br/>
-        <p>#Feuerwehr #Einsatzbericht #112 #Firefighter #Ehrenamt</p>
+        <p>#Feuerwehr #Einsatzbericht {{stichwort ? `#${stichwort}` : ''}} #Ehrenamt</p>
       </div>
     </div>
 

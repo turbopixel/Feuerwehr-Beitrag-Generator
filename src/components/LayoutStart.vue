@@ -4,13 +4,15 @@
        Klicke unten auf <em>Post erstellen</em> und fülle das Formular mit den Einsatzdaten aus.
     </p>
     <h5 class="title is-5 mb-2">Beispiel:</h5>
-    <pre>Einsatzbericht #123
-⏰ 01.06.2023 12:05
+    <pre>Einsatzbericht
+⏰ 01.03.2025 20:37
 📟 TH_Baum
-🌍 Nisselweg, Stadtmitte
-🚒 FF Stadtmitte, Polizei
+🌍 Veenhusen, Alter Kirchpfad
+🚒 FF Ortswehr, Rettungsdienst
 
-Das ist ein Beispiel Einsatzbericht.</pre>
+Das ist ein Beispiel Einsatzbericht.
+
+#Feuerwehr #Einsatzbericht #TH_Baum</pre>
   </div>
 </template>
 
