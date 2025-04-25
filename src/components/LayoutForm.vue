@@ -270,7 +270,10 @@ export default {
           <strong v-if="ort">&#x1F30D; {{ ort }}<br/></strong>
           <strong v-if="einheiten">&#x1F692; {{ einheiten }}<br/></strong>
           <br/>
-          <div v-if="bericht.length > 0">{{ bericht }}<br/><br/></div>
+          <div
+            v-if="bericht.length > 0"
+            v-for="(zeile,zeilennummer) of bericht.split('\n')"
+            v-bind:key="zeilennummer" >{{ zeile }}<br/></div>
           <div v-if="link.length > 0">{{ link }}<br/><br/></div>
         <div>{{ tags }}</div>
       </div>
