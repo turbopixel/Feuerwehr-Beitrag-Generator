@@ -274,8 +274,8 @@ export default {
             v-if="bericht.length > 0"
             v-for="(zeile,zeilennummer) of bericht.split('\n')"
             v-bind:key="zeilennummer" >{{ zeile }}<br/></div>
-          <div v-if="link.length > 0">{{ link }}<br/><br/></div>
-        <div>{{ tags }}</div>
+          <div v-if="link.length > 0"><br/>{{ link }}<br/></div>
+        <div><br/>{{ tags }}</div>
       </div>
     </div>
 
