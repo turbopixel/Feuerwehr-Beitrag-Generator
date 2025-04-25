@@ -33,11 +33,19 @@ export default {
 
       this.$data.stichwort = e.target.innerText;
     },
-    set_datum_uhrzeit(e) {
+    set_heute(e) {
       // console.log(e.target.innerText)
       // console.log(new moment().format("HH:mm"))
 
       this.$data.datum = new moment().format("YYYY-MM-DD");
+      this.$data.jahr = new moment().format("YYYY");
+      this.$data.uhrzeit = new moment().format("HH:mm");
+    },
+    set_gestern(e) {
+      // console.log(e.target.innerText)
+      // console.log(new moment().format("HH:mm"))
+
+      this.$data.datum = new moment().subtract(1, "days").format("YYYY-MM-DD");
       this.$data.jahr = new moment().format("YYYY");
       this.$data.uhrzeit = new moment().format("HH:mm");
     },
@@ -144,7 +152,8 @@ export default {
           <input type="date" v-model="datum" class="input" id="datum" @click="set_datum_uhrzeit">
           <div class="help">
             <div class="tags">
-              <span class="tag is-clickable" @click="set_datum_uhrzeit">Heute</span>
+              <span class="tag is-clickable" @click="set_heute">Heute</span>
+              <span class="tag is-clickable" @click="set_gestern">Gestern</span>
             </div>
           </div>
         </div>
