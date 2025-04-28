@@ -1,5 +1,7 @@
-[![Publish Docker image](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/actions/workflows/docker-image.yml/badge.svg)](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/actions/workflows/docker-image.yml)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fmagenbrot%2FFeuerwehr-Beitrag-Generator%2Fraw%2Frefs%2Fheads%2Fmain%2Fpackage.json&query=version&label=Version)
+[![CodeQL](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/actions/workflows/github-code-scanning/codeql)
+[![Publish Docker image](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/actions/workflows/docker-image.yml/badge.svg)](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/actions/workflows/docker-image.yml)
+[![Dependabot Updates](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/actions/workflows/dependabot/dependabot-updates)
 
 # Feuerwehr-Beitrag-Generator
 
