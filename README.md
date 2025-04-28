@@ -18,29 +18,17 @@ Website: [112.ovtec.it](https://112.ovtec.it/)
 Dieses Projekt ist in vue.js mit vite entwickelt. Führe auf deiner Konsole die folgenden
 Befehle aus, um an diesem Projekt mitzumachen.
 
-### Lokal ausführen
-
-#### npm Pakete installieren
-
-```sh
-npm install
-```
-
-#### Projekt lokal ausführen mit hot-reload
-
-```sh
-npm run dev
-```
-
-#### Projekt kompilieren
-
-```sh
-npm run build
-```
+[Forke](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/fork) dieses Repository und checke den Code in deiner lokalen Umgebung aus.
 
 ### Mit Docker entwickeln/veröffentlichen
 
-#### Docker image erzeugen
+siehe auch [Wiki](https://github.com/magenbrot/Feuerwehr-Beitrag-Generator/wiki/Pers%C3%B6nliche-Notizen-zur-Erzeugung-eines-neuen-Releases)
+
+#### Code anpassen
+
+Mach die notwendigen Änderungen am Code. Erzeuge auch gerne einen Pull Request für dieses Repository.
+
+#### Docker image erzeugen und testen
 
 ```sh
 docker build -t <your-dockerid>/ffpostcreator .
@@ -70,9 +58,27 @@ Beispiel via Docker Compose:
   ffpostcreator:
     image: <your-dockerid>/ffpostcreator:latest
     container_name: ffpostcreator
-    labels:
-      - com.centurylinklabs.watchtower.enable=true # when using watchtower for automatic updates
     ports:
       - 8095:80
     restart: unless-stopped
+```
+
+### Lokal ausführen
+
+#### npm Pakete installieren
+
+```sh
+npm install
+```
+
+#### Projekt lokal ausführen mit hot-reload
+
+```sh
+npm run dev
+```
+
+#### Projekt kompilieren
+
+```sh
+npm run build
 ```
