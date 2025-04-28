@@ -1,5 +1,5 @@
 # build stage
-FROM node:lts-alpine AS build-stage
+FROM node:22-alpine3.20 AS build-stage
 
 WORKDIR /ffpostcreator
 
@@ -12,7 +12,7 @@ COPY . .
 RUN npm run build
 
 # production stage
-FROM nginx:stable-alpine AS production-stage
+FROM nginx:1.28.0-alpine3.21 AS production-stage
 
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build-stage /ffpostcreator/dist /usr/share/nginx/html
