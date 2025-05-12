@@ -1,5 +1,5 @@
 # build stage
-FROM node:23-alpine3.20 AS build-stage
+FROM node:24-alpine3.20 AS build-stage
 
 WORKDIR /ffpostcreator
 
