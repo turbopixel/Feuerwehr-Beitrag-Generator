@@ -79,11 +79,11 @@ export default {
               <input type="text" class="input" v-model="stichwort" id="stichwort">
               <div class="help">
                 <div class="tags">
+                  <span class="tag is-clickable" @click="addKeyword">TH1</span>
+                  <span class="tag is-clickable" @click="addKeyword">F1</span>
+                  <span class="tag is-clickable" @click="addKeyword">B1</span>
                   <span class="tag is-clickable" @click="addKeyword">BMA</span>
-                  <span class="tag is-clickable" @click="addKeyword">TH_VU</span>
                   <span class="tag is-clickable" @click="addKeyword">TH_Baum</span>
-                  <span class="tag is-clickable" @click="addKeyword">F_HAUS</span>
-                  <span class="tag is-clickable" @click="addKeyword">F_PKW</span>
                 </div>
               </div>
             </div>
@@ -154,9 +154,9 @@ export default {
         <br/>
         <p v-if="bericht.length > 0">{{ bericht }}</p>
         <br/>
-        <p v-if="link.length > 0">Zum Bericht: {{ link }}</p>
+        <p v-if="link.length > 0">&#x1F517; {{ link }}</p>
         <br/>
-        <p>#Feuerwehr #Einsatzbericht {{stichwort ? `#${stichwort}` : ''}} #Ehrenamt</p>
+        <p>#Feuerwehr #Einsatzbericht {{stichwort ? `#${stichwort}` : ''}}</p>
       </div>
     </div>
 
